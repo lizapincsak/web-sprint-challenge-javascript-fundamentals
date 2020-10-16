@@ -29,4 +29,13 @@ class CubeMaker extends CuboidMaker1{
   constructor(Childattributes){
     super(Childattributes);
   }
+  volume(times){
+    return Math.pow(this.length, times);
+  }
+  surfaceArea(){
+    return 6 * Math.pow(this.length, 2)
+  }
 }
+
+console.log(cuboid1.volume()); 
+console.log(cuboid1.surfaceArea())
