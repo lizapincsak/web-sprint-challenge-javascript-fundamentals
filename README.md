@@ -27,13 +27,35 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+They are both higher order functions. 
+The differences are:
+.forEach: doesn't return new array and return is optional
+
+.map: returns a new array, doesn't manipulate with original array, needs return
+
 2. Explain the difference between a callback and a higher order function.
+
+Callback is passed into a higher order function as an argument. While, a higher order function receives a callback. 
 
 3. What is closure?
 
+Closure happens if a function doesn't have a variable. It will reach outside of the function to the global scope and use a variable from there. Closures remember what you pass through, so that it can be added upon.  
+
 4. Describe the four rules of the 'this' keyword.
 
+The 4 rules of the 'this' keyword are:
+1. Explicit Binding: 
+    a. .call(): immediately invokes a function, we pass in argyments 1 by 1
+    b. .apply(): invokes function immediately, we pass in arguemnts as an array
+    c. .bind(): pass in arguments 1 by 1 but it does not immediately invoke the function, but returns a brand new function that can be invoked later
+  2. Implcit Binding: applies to objects with methods, when the function is invoked, look to the left of the dot, that's what "this" refers to
+  3. Window Binding: if we don't give this any context it will return the window/ the global object in node and it will return undefined in strict mode
+  4. New Binding: using the new keyword constructs a new object and 'this' points to it. When a function is invoked as a constructor function, using the 'new' keyword 'this' points to the new object that's created.
+
+
 5. Why do we need super() in an extended class?
+
+Super is required because it replaces what .call() did in prototypes. It binds object's prototypes to one anothers. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
